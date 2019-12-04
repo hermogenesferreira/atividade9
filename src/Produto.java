@@ -1,51 +1,48 @@
 public abstract class Produto {
-    private String codigo;
-    private String nome;
-    private String descricao;
-    private double preco;
+    protected String codigo;
+    protected String nome;
+    protected String descricao;
+    protected double preco;
     
     public Produto(String c, String n, String d, double p){
-        
-        setCodigo(c);
-        setNome(n);
-        setDescricao(d);
-        setPreco(p);
-    }
-    
-    
-    public String getCodigo(){
-        return this.codigo;
+        this.setCodigo(c);
+        this.setNome(n);
+        this.setDescricao(d);
+        this.setPreco(p);
     }
     
     public void setCodigo(String c){
         this.codigo = c;
     }
     
-    public String getNome(){
-        return this.nome;
+    public String getCodigo(){
+        return this.codigo;
     }
     
     public void setNome(String n){
         this.nome = n;
     }
-
-    public String getDesricao(){
-        return this.descricao;
+    
+    public String getNome(){
+        return this.nome;
     }
     
     public void setDescricao(String d){
         this.descricao = d;
     }
     
-    public double getPreco(){
-        return this.preco;
+    public String getDescricao(){
+        return this.descricao;
     }
     
     public void setPreco(double p){
         this.preco = p;
     }
     
+    public double getPreco(){
+        return this.preco;
+    }
+    
     public abstract double calcularPrecoFinal();
-
     public abstract String imprimirDados();
 }

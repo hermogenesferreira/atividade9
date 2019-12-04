@@ -1,5 +1,4 @@
-
-public abstract class Parafuso extends Produto {
+public class Parafuso extends Produto {
     private double comprimento;
     private double diametro;
     
@@ -7,7 +6,6 @@ public abstract class Parafuso extends Produto {
         super(c,n,d,p);
         this.setComprimento(comp);
         this.setDiametro(diam);
-        
     }
     
     public void setComprimento(double comp){
@@ -25,7 +23,12 @@ public abstract class Parafuso extends Produto {
     public double getDiametro(){
         return this.diametro;
     }
-    public double calcularPrecoFinal(double p){
-        return p += p*0.15;
-    };
+    
+    public double calcularPrecoFinal(){
+        return this.preco*1.15;
+    }
+    
+    public String imprimirDados(){
+        return "codigo: " + this.codigo + " nome: " + this.nome + " descricao: " + this.descricao + " valor: " + this.preco + " comprimento: " + this.comprimento + " diametro: " + this.diametro;
+    }
 }
